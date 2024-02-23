@@ -21,7 +21,7 @@ The debugging port is `9229` by default
 ```sh
 "test:start": "cross-env INSTRUMENT_CODE=true NODE_OPTIONS=--inspect=9229 next dev"
 ```
-But we should use `9230` (9229+1) as the CDP (chrome-remote-interface) port base on the following prompt:
+But we should use `9230` (9229 + 1) as the CDP (chrome-remote-interface) port base on the following prompt:
 ```sh
 [WebServer] Debugger listening on ws://127.0.0.1:9229/07ad38a2-2d5a-48df-a4de-07010e2d9b18
 For help, see: https://nodejs.org/en/docs/inspector
@@ -38,6 +38,9 @@ const client = await CDP({
 });
 ```
 If you are using a different port like `8112`, then the CDP port should be `8113` (8112 + 1).
+
+## If you want to use `V8`, please refer to:
+- [nextjs-with-playwright](https://github.com/cenfun/nextjs-with-playwright)
 
 ## Issues
 - In fact, Next.js uses `swc` as the default compiler, and it has a plugin [swc-plugin-coverage-instrument](https://github.com/kwonoj/swc-plugin-coverage-instrument) for instrumentation the code for Istanbul, but there is an issue [here](https://github.com/kwonoj/swc-plugin-coverage-instrument/issues/197) that is unacceptable.
