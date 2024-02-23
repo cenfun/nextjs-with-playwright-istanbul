@@ -7,7 +7,7 @@ This example shows how to configure Playwright to work with Next.js.
 npm i
 npm run test
 ```
-Coverage report will be found here: test-results/coverage/index.html
+Coverage report will be found here: `test-results/coverage/index.html`
 
 ## Tips
 - add [babel.config.json](babel.config.json) with `istanbul` plugin for babel
@@ -37,6 +37,7 @@ const client = await CDP({
     port: 9230
 });
 ```
+If you are using a different port like `8112`, then the CDP port should be `8113` (8112 + 1).
 
 ## Issues
 - In fact, Next.js uses `swc` as the default compiler, and it has a plugin [swc-plugin-coverage-instrument](https://github.com/kwonoj/swc-plugin-coverage-instrument) for instrumentation the code for Istanbul, but there is an issue [here](https://github.com/kwonoj/swc-plugin-coverage-instrument/issues/197) that is unacceptable.
