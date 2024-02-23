@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "test:start": "cross-env INSTRUMENT_CODE=true NODE_OPTIONS=--inspect next dev",
+        "test:start": "cross-env INSTRUMENT_CODE=true NODE_OPTIONS=--inspect=9229 next dev",
         "test:command": "npm run test:start",
         "test": "playwright test"
     },
