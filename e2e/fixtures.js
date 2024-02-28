@@ -15,7 +15,10 @@ import { addCoverageReport } from 'monocart-reporter';
 //         if (isChromium) {
 //             const coverageData = await page.evaluate(() => window.__coverage__);
 //             // console.log(Object.keys(coverageData));
-//             await addCoverageReport(coverageData, test.info());
+//             // could be undefined
+//             if (coverageData) {
+//                 await addCoverageReport(coverageData, test.info());
+//             }
 //         }
 
 //     }, {
