@@ -25,6 +25,13 @@ const coverageReportOptions: CoverageReportOptions = {
         return fileSource;
     },
 
+    // all: {
+    //     dir: ['./src'],
+    //     filter: {
+    //         '**/*.tsx': true
+    //     }
+    // },
+
     reports: ['html', 'text']
 };
 
