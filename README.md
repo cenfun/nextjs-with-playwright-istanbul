@@ -1,3 +1,7 @@
+> [!NOTE]  
+> The latest version of Next.js does not work with `Babel` + `Istanbul`, see [issue](https://github.com/cenfun/nextjs-with-playwright-istanbul/issues/3).
+> It recommend to use V8 coverage, see: https://github.com/cenfun/nextjs-with-playwright
+
 # Next.js + Playwright + Istanbul
 
 This example shows how to configure Playwright to work with Next.js.
